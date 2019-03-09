@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: tensquare-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/tensquarebywx/config47.git #配置文件仓库地址
+  rabbitmq:
+    host: 192.168.88.128
+management: #暴露触发消息总线的地址
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh #修改配置文件后 手动刷新配置文件地址 需要使用post方式请求刷新
+server:
+  port: 12000 #配置中心访问端口

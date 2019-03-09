@@ -1,0 +1,7 @@
+spring:  #启动顺序 eureka注册中心 config配置中心（服务端） 基础微服务（客户端）
+  cloud:
+    config:
+      name: base
+      profile: dev
+      label: master
+      uri: http://127.0.0.1:12000
